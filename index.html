@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div{
+            padding:10px;
+            margin:250px;
+            text-align:center;
+            border:3px ridge blue;
+            background-color: greenyellow;
+            color:darkred;
+            font-weight: bold;
+        }
+        div button{
+            text-align:center;
+        }
+        body{
+           align-items:center;
+           display:flex;
+           justify-content: center;
+           background-color: black;
+        }
+        h2{
+            color:white;
+            text-shadow: 3px 3px 5px red,3px 3px 10px purple;
+        }
+        label{
+            color:blue;
+            font-weight:bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        div button{
+            color:green;
+            font-weight: bold;
+            border-radius: 6px;
+            border:3px outset black;
+        }
+        h3{
+            color:dodgerblue;
+          }
+          div input[type="number"]{
+              font-family: monospace;
+              color:grey;
+              font-weight:bolder;
+          }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Student Percentage App </h2>
+        <label>1st sub marks:</label>
+        <input type="number" id="f"/><br><br>
+        
+        <label>2nd sub marks:</label>
+        <input type="number" id="s"/><br><br>
+        
+        <label>3rd sub marks:</label>
+        <input type="number" id="t"/><br><br>
+        
+        <label>4th sub marks:</label>
+        <input type="number" id="e"/><br><br>
+        
+        <label>5th sub marks:</label>
+        <input type="number" id="l"/><br><br>
+        <button id="total" onclick=" return fun()">calculate</button>
+        <h3>Total Marks:</h3>
+    <p id="result"></p>
+    <h3>Percentage:</h3>
+    <span id="rel"></span>
+    <span id="for"></span>
+    </div>
+    <script>
+        function fun()
+        {
+        var u=parseInt(document.getElementById("f").value);
+        var w=parseInt(document.getElementById("s").value);
+        var x=parseInt(document.getElementById("t").value);
+        var y=parseInt(document.getElementById("e").value);
+        var z=parseInt(document.getElementById("l").value);
+        var total=u+w+x+y+z;
+        document.getElementById('result').innerHTML=total;
+         var per=total*100/500;
+         document.getElementById("rel").innerHTML=per;
+        }
+        
+          
+        
+    
+    </script>
+    
+</body>
+</html>
